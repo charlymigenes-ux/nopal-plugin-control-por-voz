@@ -4,7 +4,7 @@
 (() => {
   'use strict';
   const PLUGIN_ID = 'control-por-voz';
-  const VERSION = '0.1.0';
+  const VERSION = '0.1.1';
   const HAS_DOM = typeof document !== 'undefined';
   if (typeof window !== 'undefined' && window.NopalPluginRegistry?.[PLUGIN_ID]) return;
 

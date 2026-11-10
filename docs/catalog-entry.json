@@ -16,7 +16,7 @@
     "Usar el micrófono del navegador",
     "Ejecutar escenas y comandos de máquinas con tu sesión de NOPAL"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "availability": "available",
   "pricing": {
     "type": "free"
