@@ -1,0 +1,27 @@
+{
+  "id": "control-por-voz",
+  "name": "Control por voz",
+  "description": "Di «Nopal» y controla luces, máquinas y la pantalla con la voz.",
+  "long_description": "Asistente de voz para el taller: enciende luces y aire, informa el estado de las máquinas, hace home, pausa y reanuda, navega la pantalla de NOPAL y usa la IA de NOPAL como respaldo. Corre en el navegador con tu sesión; requiere Edge o Chrome y HTTPS o localhost.",
+  "publisher": "Comunidad NOPAL",
+  "category": "Producción",
+  "icon": "mic",
+  "accent": "#22d3ee",
+  "compatibility": [
+    "Impresión 3D",
+    "Láser",
+    "CNC"
+  ],
+  "permissions": [
+    "Usar el micrófono del navegador",
+    "Ejecutar escenas y comandos de máquinas con tu sesión de NOPAL"
+  ],
+  "version": "0.1.0",
+  "availability": "available",
+  "pricing": {
+    "type": "free"
+  },
+  "repo_url": "https://github.com/charlymigenes-ux/nopal-plugin-control-por-voz",
+  "size": "Por definir",
+  "featured": false
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "control-por-voz",
+  "name": "Control por voz",
+  "version": "0.1.0",
+  "publisher": "Comunidad NOPAL",
+  "category": "Producción",
+  "description": "Di «Nopal» y controla el taller con la voz: luces y aire, estado de máquinas, home, pausa, navegación de la pantalla y la IA de NOPAL como respaldo.",
+  "permissions": ["Usar el micrófono del navegador", "Ejecutar escenas y comandos de máquinas con tu sesión de NOPAL"],
+  "compatibility": ["Impresión 3D", "Láser", "CNC"],
+  "frontend": {
+    "script": "frontend/voice-control.js",
+    "style": "frontend/voice-control.css",
+    "section": "control-por-voz"
+  }
+}
