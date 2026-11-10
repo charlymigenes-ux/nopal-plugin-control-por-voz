@@ -7,17 +7,23 @@
 #cpv-bubble { max-width: min(340px, 80vw); background: #0f1512ee; color: #e8f0ea; border: 1px solid #ffffff22; border-radius: 12px; padding: 8px 12px; display: none; line-height: 1.35; }
 #cpv-bubble .me { color: #93b4ff; } #cpv-bubble .err { color: #f87171; }
 
-.cpv-section { padding: 24px; max-width: 880px; margin: 16px auto; border-radius: var(--radius-md, 14px); color: var(--text-strong, inherit);
+/* A todo el ancho: las tarjetas se reparten en hasta 3 columnas parejas (1 en pantallas angostas) para no tener que bajar.
+   NOPAL muestra cada .view-section como flex de alto fijo con scroll propio; aquí la sección crece con su contenido y el scroll es el de la página. */
+.view-section.cpv-section { display: block; height: auto; flex: 0 0 auto; overflow: visible; margin: 16px; padding: 20px 24px 8px;
+  columns: 3 300px; column-gap: 16px; border-radius: var(--radius-md, 14px); color: var(--text-strong, inherit);
   background: color-mix(in srgb, var(--surface-base, #111) 90%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.cpv-section > h1, .cpv-section > .cpv-sub { column-span: all; }
+.cpv-section > .cpv-sub { margin-bottom: 16px; }
 .cpv-section h1 { margin: 0 0 4px; font-size: 24px; color: var(--text-strong, inherit); }
 .cpv-section h2 { color: var(--text-strong, inherit); }
 .cpv-sub { color: var(--text-soft, inherit); font-size: 13px; }
-.cpv-card { margin-top: 16px; padding: 16px; border: 1px solid var(--border-subtle, #8884); border-radius: var(--radius-md, 12px); background: var(--surface-raised, #1b1b1b); }
+.cpv-card { margin: 0 0 16px; break-inside: avoid; padding: 16px; border: 1px solid var(--border-subtle, #8884); border-radius: var(--radius-md, 12px); background: var(--surface-raised, #1b1b1b); }
 .cpv-card h2 { margin: 0 0 10px; font-size: 16px; }
 .cpv-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 8px 0; }
-.cpv-row label { min-width: 150px; color: var(--text-strong, inherit); }
+.cpv-row label { min-width: 110px; color: var(--text-strong, inherit); }
 .cpv-row select, .cpv-row input[type=text], .cpv-section textarea { background: var(--surface-sunken, #0c0c0c); color: var(--text-strong, inherit); border: 1px solid var(--border-control, #8886); border-radius: 8px; padding: 6px 10px; font: inherit; }
-.cpv-row select, .cpv-row input[type=text] { min-width: 220px; max-width: 100%; }
+.cpv-row select, .cpv-row input[type=text] { flex: 1 1 220px; min-width: 0; max-width: 100%; }
+.cpv-row input[type=range] { flex: 1 1 140px; min-width: 0; }
 .cpv-section textarea { width: 100%; min-height: 90px; box-sizing: border-box; }
 .cpv-section code { color: var(--accent-fill, inherit); }
 .cpv-ok { color: #22a06b; } .cpv-bad { color: #e5484d; }
